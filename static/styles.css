@@ -1,0 +1,48 @@
+body {
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+    }
+#display{
+    position: relative;
+    top: 100px;
+    width: 40%;
+    /* border: 3px solid red; */
+    padding-left: 10%;
+    padding-right: 10%;
+    /* text-align: center; */
+    text-align: left;
+}
+input{
+    float: right;
+    position: relative;
+    right: 20px;
+}
+input[type=text]{
+    width: 300px;
+}
+.emails{
+    position: relative;
+    left: 20px;
+}
+.error {
+    background: red;
+    width:400px;
+    min-height: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+}
+.success {
+    background: green;
+    width:400px;
+    min-height: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+}

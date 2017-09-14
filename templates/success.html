@@ -1,0 +1,29 @@
+<html>
+        <head>
+            <title>Emails</title>
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        </head>
+        <body>
+            <div id="display">
+                {% with successmsgs = get_flashed_messages(category_filter=["success"]) %}
+                {% if successmsgs %}
+                <div class="success">
+                    {% for msg in successmsgs %}
+                    <h1>{{ msg }}</h1>
+                    {% endfor %}
+                    <form action='/reset' method='post'>
+                        <input type='submit' name='reset' value='Reset'>
+                    </form>
+                </div>
+                {% endif %}
+                {% endwith %}
+                <h2>Email Addresses Entered:</h2>
+                {% for email in emails: %}
+                <div>
+                    <p class="emails">{{ email['email']}} &nbsp;&nbsp;&nbsp;{{ email['created_at']}}</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </body>
+    </html>
